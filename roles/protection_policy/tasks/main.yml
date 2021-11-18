@@ -1,0 +1,16 @@
+#  Copyright (c) 2021 Dell Inc. or its subsidiaries.
+#  All Rights Reserved.
+
+- name: executing protection policy module 
+  register: protection_policy
+  dellemc.powerstore.dellemc_powerstore_protectionpolicy:
+    array_ip: "{{array_ip}}"
+    verifycert: "{{verifycert}}"
+    user: "{{user}}"
+    password: "{{password}}"
+    name: "{{protection_policy_name}}"
+    description: "{{ protection_policy_description }}"
+    snapshotrules:
+      - "{{ snapshot_rule }}"
+    snapshotrule_state: "{{ snapshot_rule_state }}"
+    state: "{{ protection_policy_state }}"

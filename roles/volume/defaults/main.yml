@@ -1,0 +1,6 @@
+#  Copyright (c) 2021 Dell Inc. or its subsidiaries.
+#  All Rights Reserved.
+
+volume_description: "Volume is created by Ansible POE"
+volume_state: "present"
+volume_host_state: "mapped"

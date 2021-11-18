@@ -1,0 +1,13 @@
+---
+- name: Volume operations on PowerStore
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: get Volume details
+      include_role:
+        name: volume
+      vars:
+        role_actions: 
+          - volume_details

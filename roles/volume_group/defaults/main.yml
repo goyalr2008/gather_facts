@@ -1,0 +1,8 @@
+#  Copyright (c) 2021 Dell Inc. or its subsidiaries.
+#  All Rights Reserved.
+
+vg_description: "This volume group is for volume created by Anisble POE"
+vg_state: "present"
+volume_vg_state: "present-in-group"
+
+  

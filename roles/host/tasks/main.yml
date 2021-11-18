@@ -1,0 +1,18 @@
+#  Copyright (c) 2021 Dell Inc. or its subsidiaries.
+#  All Rights Reserved.
+
+- name: executing host action on Powerstore
+  dellemc.powerstore.dellemc_powerstore_host:
+    array_ip: "{{ array_ip }}"
+    verifycert: "{{ verifycert }}"
+    user: "{{ user }}"
+    password: "{{ password }}"
+    host_name: "{{ host_name }}"
+    os_type: "{{ os_type }}"
+    initiators:
+      - "{{ host_initiator }}"
+    state: "{{ host_state }}"
+    initiator_state: "{{ host_initiator_state }}"
+    
+
+

@@ -1,0 +1,9 @@
+#  Copyright (c) 2021 Dell Inc. or its subsidiaries.
+#  All Rights Reserved.
+
+- include_tasks: create_volume_group_protection_policy.yml
+  when: '"create_volume_group" in role_actions'
+
+- include_tasks: add_volume_volumegroup.yml
+  when: '"add_volume_volumegroup" in role_actions'
+  

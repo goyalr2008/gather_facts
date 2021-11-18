@@ -1,0 +1,6 @@
+#  Copyright (c) 2021 Dell Inc. or its subsidiaries.
+#  All Rights Reserved.
+
+protection_policy_description: "ansible protection policy"
+snapshot_rule_state: "present-in-policy"
+protection_policy_state: "present"

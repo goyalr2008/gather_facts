@@ -1,0 +1,14 @@
+  #  Copyright (c) 2021 Dell Inc. or its subsidiaries.
+#  All Rights Reserved.
+
+  - name: Add volume to volume group
+    dellemc.powerstore.dellemc_powerstore_volumegroup:
+      array_ip: "{{array_ip}}"
+      verifycert: "{{verifycert}}"
+      user: "{{user}}"
+      password: "{{password}}"
+      vg_name: "{{vg_name}}"
+      state: "{{ vg_state }}"
+      volumes:
+        - "{{vol_name}}"
+      vol_state: "{{ volume_vg_state }}"
