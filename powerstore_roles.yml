@@ -7,16 +7,16 @@
   collections:
   - dellemc.powerstore
 
-  # tasks:
-  #   - name: get Volume details
-  #     include_role:
-  #       name: volume
-  #     vars:
-  #       role_actions: 
-  #         - volume_details
+  tasks:
+    - name: get Volume details
+      include_role:
+        name: volume
+      vars:
+        role_actions: 
+          - volume_details
 
-  roles:
-  - volume
-    vars:
-      role_actions:
-        -volume_details
+  # roles:
+  # - volume
+  #   vars:
+  #     role_actions:
+  #       -volume_details
