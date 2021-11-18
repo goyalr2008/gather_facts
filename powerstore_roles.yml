@@ -4,6 +4,9 @@
   connection: local
   gather_facts: false
 
+  collections:
+  - dellemc.powerstore
+
   tasks:
     - name: get Volume details
       include_role:
