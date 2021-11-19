@@ -15,6 +15,6 @@
       vol_name: "{{vol_name}}"
       state: "present"
 
-  - name: return the response 
-    debug:
-      msg: "{{ vol_result['event_data']['res']['volume_details'] }}"
+#   - name: return the response 
+#     debug:
+#       msg: "{{ vol_result['event_data']['res']['volume_details'] }}"
