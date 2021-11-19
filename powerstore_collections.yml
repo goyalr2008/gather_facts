@@ -17,4 +17,4 @@
 
   - name: return the response 
     debug:
-      msg: "{{ vol_result }}"
+      msg: "{{ vol_result['event_data']['res']['volume_details'] }}"
