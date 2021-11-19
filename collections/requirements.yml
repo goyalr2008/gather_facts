@@ -3,5 +3,6 @@
 ---
 collections:
   - src: https://github.com/dell/ansible-powerstore
+    name: dellemc.powerstore
 
 
