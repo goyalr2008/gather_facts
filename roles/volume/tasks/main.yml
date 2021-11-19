@@ -1,0 +1,12 @@
+#  Copyright (c) 2021 Dell Inc. or its subsidiaries.
+#  All Rights Reserved.
+
+- include_tasks: create_volume.yml
+  when: '"create_volume" in role_actions'
+
+- include_tasks: map_volume_host.yml
+  when: '"map_volume_host" in role_actions'
+
+- include_tasks: get_volume_details.yml
+  when: '"volume_details" in role_actions'
+  

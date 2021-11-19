@@ -1,0 +1,7 @@
+#  Copyright (c) 2021 Dell Inc. or its subsidiaries.
+#  All Rights Reserved.
+
+allowed_role_actions:
+  - create_volume
+  - map_volume_host
+  - volume_details

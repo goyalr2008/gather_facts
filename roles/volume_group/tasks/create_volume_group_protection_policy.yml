@@ -1,0 +1,13 @@
+#  Copyright (c) 2021 Dell Inc. or its subsidiaries.
+#  All Rights Reserved.
+
+- name: Create volume group with protection policy
+  dellemc.powerstore.dellemc_powerstore_volumegroup:
+    array_ip: "{{array_ip}}"
+    verifycert: "{{verifycert}}"
+    user: "{{user}}"
+    password: "{{password}}"
+    vg_name: "{{vg_name}}"
+    description: "{{ vg_description }}"
+    protection_policy: "{{protection_policy_name}}"
+    state: "{{ vg_state }}"

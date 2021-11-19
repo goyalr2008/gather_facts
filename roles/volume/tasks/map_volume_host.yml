@@ -1,0 +1,14 @@
+#  Copyright (c) 2021 Dell Inc. or its subsidiaries.
+#  All Rights Reserved.
+
+- name: Map volume to host name, without HLU
+  dellemc.powerstore.dellemc_powerstore_volume:
+    array_ip: "{{array_ip}}"
+    verifycert: "{{verifycert}}"
+    user: "{{user}}"
+    password: "{{password}}"
+    vol_name: "{{vol_name}}"
+    host: "{{host_name}}"
+    mapping_state: "{{ volume_host_state}}"
+    state: "{{ volume_state}}"
+    

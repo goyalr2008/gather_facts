@@ -1,0 +1,16 @@
+#  Copyright (c) 2021 Dell Inc. or its subsidiaries.
+#  All Rights Reserved.
+
+- name: Create volume with performance policy
+  register: result_vol    
+  dellemc.powerstore.dellemc_powerstore_volume:
+    array_ip: "{{array_ip}}"
+    verifycert: "{{verifycert}}"
+    user: "{{user}}"
+    password: "{{password}}"
+    vol_name: "{{vol_name}}"
+    size: "{{capacity | int}}"
+    cap_unit: "{{cap_unit}}"
+    state: "{{ volume_state }}"
+    description: "{{ volume_description }}"
+    performance_policy: 'medium'
