@@ -6,6 +6,7 @@
 
   tasks:
   - name: Get volume details using ID
+    register: vol_result
     dellemc.powerstore.dellemc_powerstore_volume:
       array_ip: "{{array_ip}}"
       verifycert: false
@@ -13,3 +14,7 @@
       password: "{{password}}"
       vol_name: "{{vol_name}}"
       state: "present"
+
+  - name: return the response 
+    debug:
+      msg: vol_result
