@@ -1,0 +1,44 @@
+#  Copyright (c) 2021 Dell Inc. or its subsidiaries.
+#  All Rights Reserved.
+
+---
+- name: Performing Volume operations on Powerstore
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  vars:
+    verifycert: "{{ verifycert | bool }}"
+
+  collections:
+  - dellemc.powerstore
+
+  tasks:
+    - name: create protection policy with snapshot rule
+      include_role:
+        name: protection_policy
+
+    - name: create host 
+      include_role:
+        name: host
+
+    - name: create volume
+      include_role:
+        name: volume
+      vars:
+        role_actions: 
+          - create_volume
+
+    - name: create volume group and add volume to it
+      include_role:
+        name: volume_group
+      vars:
+        role_actions: 
+          - create_volume_group
+          - add_volume_volumegroup
+
+    - name: map volume to host
+      include_role:
+        name: volume
+      vars:
+        role_actions: 
+          - map_volume_host
