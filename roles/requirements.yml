@@ -1,8 +1,8 @@
 
 # from GitHub
 ---
-roles:
-  - src: https://github.com/goyalr2008/gather_facts
+# roles:
+#   - src: https://github.com/goyalr2008/gather_facts
 
 # collections:
 #   - src: https://github.com/dell/ansible-powerstore
