@@ -4,4 +4,5 @@
 collections:
   # - src: https://github.com/dell/ansible-powerstore
   - name: dellemc.powerstore
-
+  - name: apex.powerstore
+    source: https://github.com/goyalr2008/powerstore_roles

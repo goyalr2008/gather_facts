@@ -10,7 +10,7 @@
     verifycert: "{{ verifycert | bool }}"
 
   collections:
-  - dellemc.powerstore
+  - apex.powerstore
 
   tasks:
     - name: create protection policy with snapshot rule
